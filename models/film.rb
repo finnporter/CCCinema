@@ -28,6 +28,11 @@ class Film
     result = film_hashes.map { |film_hash| Film.new(film_hash)  }
   end
 
+  def self.delete_all
+    sql = "DELETE FROM films"
+    SqlRunner.run(sql)
+  end
+
   
   
 end
